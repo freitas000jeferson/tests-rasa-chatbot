@@ -7,3 +7,5 @@ python -m venv ./venv
 .\venv\Scripts\activate
 pip install rasa
 rasa init
+rasa train
+rasa shell

@@ -1,34 +1,45 @@
-version: "2.0"
-
-intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-
-responses:
-  utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+responses:
+  utter_greet:
+  - text: Olá! tudo bem?
+  - text: Hi!!! como vc tá?
+  - text: Iai, tudo bem?
+  - text: Tudo bem com você?
+  - text: Oi, tudo bem?
+  - text: Bom diaaaa! como vc tá?
+  utter_cheer_up:
+  # - image: https://i.imgur.com/nGF1K8f.jpg
+  #   text: 'Here is something to cheer you up:'
+  - text: vai tudo ficar bem, pode acreditar...
+  - text: Vai dar tudo certo
+  - text: Aguente firme, tudo tem um caminho...
+  utter_did_that_help:
+  - text: como posso ajudar você?
+  - text: precisa de alguma coisa?
+  - text: como posso te ajudar?
+  - text: Iai amigão, o que posso fazer pra te ajudar?
+  utter_happy:
+  - text: Ótimo, continue positivo
+  - text: Incrível, vc é o cara!!!
+  - text: Massa, continue assim
+  utter_goodbye:
+  - text: Tchau
+  - text: bye bye
+  - text: ate mais
+  - text: então dps a gente se fala
+  - text: Adeus companheiro
+  utter_iamabot:
+  - text: I am a bot.
+  - text: Sou humano, achou q fosse um robô? que nada,\n <ERRO:405>::0010101001 Exception crazy human!!! 0101001111
+  - text: o que vc acha?! rs
+  - text: certeza q não sou a alexa rs
