@@ -1,5 +1,4 @@
 version: "2.0"
-
 nlu:
 - intent: greet
   examples: |
@@ -14,7 +13,6 @@ nlu:
     - hi
     - hey
     - hello
-
 - intent: goodbye
   examples: |
     - adeus
@@ -28,7 +26,6 @@ nlu:
     - bye
     - goodbye
     - bye bye
-
 - intent: affirm
   examples: |
     - certo
@@ -39,7 +36,6 @@ nlu:
     - yes
     - y
     - s
-
 - intent: deny
   examples: |
     - não
@@ -50,8 +46,6 @@ nlu:
     - nam
     - no
     - n
-
-
 - intent: mood_great
   examples: |
     - ótimo
@@ -68,7 +62,6 @@ nlu:
     - amazing
     - I am great
     - I am amazing
-
 - intent: mood_unhappy
   examples: |
     - não muito
@@ -88,7 +81,7 @@ nlu:
     - sad
     - very sad
     - unhappy
-
+    - \stop
 - intent: bot_challenge
   examples: |
     - o que é você?
@@ -97,3 +90,36 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+- intent: request_names
+  examples: |
+    - eu quero te dar meu nome
+    - pegue meu nome
+    - você quer saber meu nome?
+- intent: give_time
+  examples: |
+    - qual a hora
+    - que horas são
+    - pode me dizer a hora agora
+- intent: give_question
+  examples: |
+    - me diz uma questão
+    - quero uma questão
+    - pode me dizer uma questão
+- intent: answer_question
+  examples: |
+    - do
+    - does
+- intent: give_question_to_be
+  examples: |
+    - atividade to be
+    - me de uma atividade to be
+    - to be
+
+- intent: response_to_be
+  examples: |
+    - [are]{"entity": "responses_questions_to_be"}
+    - a correta é [is]{"entity": "responses_questions_to_be"}
+    - [is]{"entity": "responses_questions_to_be"}
+    - minha resposta [am]{"entity": "responses_questions_to_be"}
+    - escolho [are]{"entity": "responses_questions_to_be"}
+    - acho que é [is]{"entity": "responses_questions_to_be"}

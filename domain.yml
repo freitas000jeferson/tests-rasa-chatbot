@@ -1,25 +1,48 @@
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
 intents:
+- mood_unhappy
 - greet
 - goodbye
 - affirm
 - deny
 - mood_great
-- mood_unhappy
 - bot_challenge
+- inform
+- out_of_scope
+- request_names
+- give_time
+- give_question
+- answer_question
+- give_question_to_be
+- response_to_be
+
+slots:
+  first_name:
+    type: text
+    influence_conversation: true
+  last_name:
+    type: text
+    influence_conversation: true
+  requested_slot:
+    type: text
+    influence_conversation: false
+  ans_question:
+    type: text
+    influence_conversation: false
+  ans_id_question:
+    type: text
+    influence_conversation: false
+  responses_questions_to_be:
+    type: text
+
 responses:
   utter_greet:
   - text: Olá! tudo bem?
-  - text: Hi!!! como vc tá?
-  - text: Iai, tudo bem?
-  - text: Tudo bem com você?
-  - text: Oi, tudo bem?
   - text: Bom diaaaa! como vc tá?
   utter_cheer_up:
-  # - image: https://i.imgur.com/nGF1K8f.jpg
-  #   text: 'Here is something to cheer you up:'
   - text: vai tudo ficar bem, pode acreditar...
   - text: Vai dar tudo certo
   - text: Aguente firme, tudo tem um caminho...
@@ -40,6 +63,42 @@ responses:
   - text: Adeus companheiro
   utter_iamabot:
   - text: I am a bot.
-  - text: Sou humano, achou q fosse um robô? que nada,\n <ERRO:405>::0010101001 Exception crazy human!!! 0101001111
-  - text: o que vc acha?! rs
-  - text: certeza q não sou a alexa rs
+  utter_ask_first_name:
+  - text: Qual seu primeiro nome?
+  utter_ask_last_name:
+  - text: Qual seu sobrenome?
+  utter_submit:
+  - text: Ok. Obrigado!
+  utter_slots_values:
+  - text: Seu nome é {first_name} {last_name}!
+  # utter_what_your_answer_to_be:
+  # - text: "What your answer:"
+  #   buttons:
+  #   - title: am
+  #     payload: '/inform{{"responses_questions_to_be": "am"}}'
+  #   - title: is
+  #     payload: '/inform{{"responses_questions_to_be": "is"}}'
+  #   - title: are
+  #     payload: '/inform{{"responses_questions_to_be": "are"}}'
+
+actions:
+- action_show_time
+- action_new_questions
+- action_recive_answer
+- action_new_questions_to_be
+- action_receive_answer_to_be
+- utter_greet
+- utter_slots_values
+- utter_submit
+
+entities:
+- responses_questions_to_be
+
+forms:
+  name_form:
+    first_name:
+    - type: from_text
+    last_name:
+    - type: from_text
+  
+version: '2.0'
