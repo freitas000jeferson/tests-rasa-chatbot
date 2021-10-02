@@ -9,6 +9,7 @@ pip install rasa
 rasa init
 rasa train
 rasa shell
+rasa x
 
 #### roda servidor de actions
 rasa run actions

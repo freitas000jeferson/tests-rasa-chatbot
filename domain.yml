@@ -17,7 +17,8 @@ intents:
 - give_question
 - answer_question
 - give_question_to_be
-- response_to_be
+- response
+- give_question_prepositions
 
 slots:
   first_name:
@@ -35,10 +36,20 @@ slots:
   ans_id_question:
     type: text
     influence_conversation: false
-  responses_questions_to_be:
+  responses_questions:
     type: text
 
 responses:
+  utter_happy:
+  - text: Ótimo, continue positivo
+  - text: Incrível, vc é o cara!!!
+  - text: Massa, continue assim
+  utter_goodbye:
+  - text: Tchau
+  - text: bye bye
+  - text: ate mais
+  - text: então dps a gente se fala
+  - text: Adeus companheiro
   utter_greet:
   - text: Olá! tudo bem?
   - text: Bom diaaaa! como vc tá?
@@ -51,16 +62,6 @@ responses:
   - text: precisa de alguma coisa?
   - text: como posso te ajudar?
   - text: Iai amigão, o que posso fazer pra te ajudar?
-  utter_happy:
-  - text: Ótimo, continue positivo
-  - text: Incrível, vc é o cara!!!
-  - text: Massa, continue assim
-  utter_goodbye:
-  - text: Tchau
-  - text: bye bye
-  - text: ate mais
-  - text: então dps a gente se fala
-  - text: Adeus companheiro
   utter_iamabot:
   - text: I am a bot.
   utter_ask_first_name:
@@ -87,12 +88,14 @@ actions:
 - action_recive_answer
 - action_new_questions_to_be
 - action_receive_answer_to_be
+- action_new_questions_preposition
+- action_receive_answer_preposition
 - utter_greet
 - utter_slots_values
 - utter_submit
 
 entities:
-- responses_questions_to_be
+- responses_questions
 
 forms:
   name_form:

@@ -76,12 +76,23 @@ stories:
   steps:
   - intent: give_question_to_be
   - action: action_new_questions_to_be
-  - intent: response_to_be
+  - intent: response
     entities:
-      - responses_questions_to_be: "is"
+      - responses_questions: "is"
   - slot_was_set:
-    - responses_questions_to_be: "is"
+    - responses_questions: "is"
   - action: action_receive_answer_to_be
+
+- story: exercise question preposition path 1
+  steps:
+  - intent: give_question_prepositions
+  - action: action_new_questions_preposition
+  - intent: response
+    entities:
+      - responses_questions: "on"
+  - slot_was_set:
+    - responses_questions: "on"
+  - action: action_receive_answer_preposition
 
 - story: exercise question path 2
   steps:

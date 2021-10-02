@@ -114,12 +114,18 @@ nlu:
     - atividade to be
     - me de uma atividade to be
     - to be
-
-- intent: response_to_be
+- intent: give_question_prepositions
   examples: |
-    - [are]{"entity": "responses_questions_to_be"}
-    - a correta é [is]{"entity": "responses_questions_to_be"}
-    - [is]{"entity": "responses_questions_to_be"}
-    - minha resposta [am]{"entity": "responses_questions_to_be"}
-    - escolho [are]{"entity": "responses_questions_to_be"}
-    - acho que é [is]{"entity": "responses_questions_to_be"}
+    - quero atividade de prepositions
+    - me de uma questão de prepositions
+    - prepositions
+
+- intent: response
+  examples: |
+    - [are]{"entity": "responses_questions"}
+    - a correta é [is]{"entity": "responses_questions"}
+    - [is]{"entity": "responses_questions"}
+    - minha resposta [am]{"entity": "responses_questions"}
+    - escolho [on]{"entity": "responses_questions"}
+    - acho que é [in]{"entity": "responses_questions"}
+    - a resposta é [at]{"entity": "responses_questions"}
