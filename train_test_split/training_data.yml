@@ -1,0 +1,110 @@
+version: "2.0"
+nlu:
+- intent: answer_question
+  examples: |
+    - does
+- intent: request_names
+  examples: |
+    - pegue meu nome
+    - você quer saber meu nome?
+- intent: give_time
+  examples: |
+    - qual a hora
+    - que horas são
+- intent: give_question
+  examples: |
+    - me diz uma questão
+    - quero uma questão
+- intent: give_question_to_be
+  examples: |
+    - me de uma atividade to be
+    - to be
+- intent: give_question_prepositions
+  examples: |
+    - prepositions
+    - me de uma questão de prepositions
+- intent: bot_challenge
+  examples: |
+    - am I talking to a human?
+    - o que é você?
+    - am I talking to a bot?
+    - você é um robô?
+    - are you a bot?
+- intent: response
+  examples: |
+    - a correta é [is](responses_questions)
+    - minha resposta [am](responses_questions)
+    - a resposta é [at](responses_questions)
+    - acho que é [in](responses_questions)
+    - [is](responses_questions)
+    - escolho [on](responses_questions)
+- intent: affirm
+  examples: |
+    - certo
+    - entendi
+    - s
+    - tudo bem
+    - y
+    - sim
+    - ok
+- intent: deny
+  examples: |
+    - não sei
+    - mais ou menos
+    - n
+    - no
+    - nam
+    - não
+    - não gostei
+- intent: greet
+  examples: |
+    - hey
+    - boa noite
+    - tudo bem
+    - oi, tudo bem?
+    - hello
+    - iai
+    - oi
+    - hi
+    - ola, tudo bem?
+- intent: goodbye
+  examples: |
+    - tchau
+    - vejo vc dps
+    - vejo você depois
+    - ate logo
+    - bye bye
+    - ate mais
+    - ate amanhã
+    - tchau tchau
+    - bye
+- intent: mood_great
+  examples: |
+    - bom
+    - maravilhoso
+    - legal
+    - perfeito
+    - perfect
+    - great
+    - muito bom
+    - I am amazing
+    - gostei
+    - I am great
+    - massa
+- intent: mood_unhappy
+  examples: |
+    - very sad
+    - sad
+    - I am sad
+    - estou depremido
+    - meio pra baixo
+    - \stop
+    - meio triste
+    - I'm so sad
+    - não muito
+    - muito triste
+    - não muito bem
+    - não estou muito bem
+    - unhappy
+    - horrível
+    - decepcionado

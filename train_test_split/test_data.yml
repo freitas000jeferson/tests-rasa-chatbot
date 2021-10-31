@@ -1,0 +1,50 @@
+version: "2.0"
+nlu:
+- intent: answer_question
+  examples: |
+    - do
+- intent: request_names
+  examples: |
+    - eu quero te dar meu nome
+- intent: give_time
+  examples: |
+    - pode me dizer a hora agora
+- intent: give_question
+  examples: |
+    - pode me dizer uma questão
+- intent: give_question_to_be
+  examples: |
+    - atividade to be
+- intent: give_question_prepositions
+  examples: |
+    - quero atividade de prepositions
+- intent: bot_challenge
+  examples: |
+    - are you a human?
+- intent: response
+  examples: |
+    - [are](responses_questions)
+- intent: affirm
+  examples: |
+    - yes
+- intent: deny
+  examples: |
+    - não muito
+- intent: greet
+  examples: |
+    - bom dia
+    - ola
+- intent: goodbye
+  examples: |
+    - goodbye
+    - adeus
+- intent: mood_great
+  examples: |
+    - amazing
+    - incrível
+    - ótimo
+- intent: mood_unhappy
+  examples: |
+    - triste
+    - infeliz
+    - estou triste

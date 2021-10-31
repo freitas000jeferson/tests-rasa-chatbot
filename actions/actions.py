@@ -6,6 +6,7 @@
 
 
 # This is a simple example for a custom action which utters "Hello World!"
+import pymongo
 import random
 import datetime as dt
 from typing import Any, Text, Dict, List
@@ -193,10 +194,16 @@ class ActionSendNewQuestionToBe(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        id = random.randint(0, 4)
+        # id = random.randint(0, 4)
+        id=0
+        question = connectMongo()
+        print(question)
+        # dispatcher.utter_message(
+        #     text=f"{questionsToBe[id]['q']}",
+        #     buttons=questionsToBe[id]['op'])
         dispatcher.utter_message(
-            text=f"{questionsToBe[id]['q']}",
-            buttons=questionsToBe[id]['op'])
+            text=f"{question['question']}",
+            buttons=question['options'])
         return [SlotSet("ans_id_question", id)]
 
 class ActionReciveAnswerToBe(Action):
@@ -246,3 +253,14 @@ class ActionReciveAnswerPrepositions(Action):
             dispatcher.utter_message(text=f"Errou!\nO correto é: {questionsPrepositions[id]['a']}")
         # dispatcher.utter_message(text=f"voce selecionou: {select}")
         return []
+
+def connectMongo():
+    myclient = pymongo.MongoClient('mongodb+srv://freitas000jeferson:92028867Jef@cluster0.eetke.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+    db = myclient["rasa"]
+    collection = db["questions"]
+    query = { "category": "TO_BE" }
+
+    listdocs = collection.find(query)
+    # for x in listdocs:
+    #     print(x)
+    return listdocs[0]
