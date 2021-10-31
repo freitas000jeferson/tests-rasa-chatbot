@@ -6,6 +6,7 @@
 
 
 # This is a simple example for a custom action which utters "Hello World!"
+# from util import urlmongo
 import pymongo
 import random
 import datetime as dt
@@ -255,7 +256,8 @@ class ActionReciveAnswerPrepositions(Action):
         return []
 
 def connectMongo():
-    myclient = pymongo.MongoClient('mongodb+srv://freitas000jeferson:92028867Jef@cluster0.eetke.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+    # url = urlmongo()
+    myclient = pymongo.MongoClient( 'mongodb+srv://freitas000jeferson:92028867Jef@cluster0.eetke.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
     db = myclient["rasa"]
     collection = db["questions"]
     query = { "category": "TO_BE" }
