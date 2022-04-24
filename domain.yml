@@ -3,22 +3,22 @@ session_config:
   carry_over_slots_to_new_session: true
 
 intents:
-- mood_unhappy
-- greet
-- goodbye
-- affirm
-- deny
-- mood_great
-- bot_challenge
-- inform
-- out_of_scope
-- request_names
-- give_time
-- give_question
-- answer_question
-- give_question_to_be
-- response
-- give_question_prepositions
+  - mood_unhappy
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - bot_challenge
+  - inform
+  - out_of_scope
+  - request_names
+  - give_time
+  - give_question
+  - answer_question
+  - give_question_to_be
+  - response
+  - give_question_prepositions
 
 slots:
   first_name:
@@ -41,37 +41,37 @@ slots:
 
 responses:
   utter_happy:
-  - text: Ótimo, continue positivo
-  - text: Incrível, vc é o cara!!!
-  - text: Massa, continue assim
+    - text: Ótimo, continue positivo
+    - text: Incrível, vc é o cara!!!
+    - text: Massa, continue assim
   utter_goodbye:
-  - text: Tchau
-  - text: bye bye
-  - text: ate mais
-  - text: então dps a gente se fala
-  - text: Adeus companheiro
+    - text: Tchau
+    - text: bye bye
+    - text: ate mais
+    - text: então dps a gente se fala
+    - text: Adeus companheiro
   utter_greet:
-  - text: Olá! tudo bem?
-  - text: Bom diaaaa! como vc tá?
+    - text: Olá! tudo bem?
+    - text: Bom diaaaa! como vc tá?
   utter_cheer_up:
-  - text: vai tudo ficar bem, pode acreditar...
-  - text: Vai dar tudo certo
-  - text: Aguente firme, tudo tem um caminho...
+    - text: vai tudo ficar bem, pode acreditar...
+    - text: Vai dar tudo certo
+    - text: Aguente firme, tudo tem um caminho...
   utter_did_that_help:
-  - text: como posso ajudar você?
-  - text: precisa de alguma coisa?
-  - text: como posso te ajudar?
-  - text: Iai amigão, o que posso fazer pra te ajudar?
+    - text: como posso ajudar você?
+    - text: precisa de alguma coisa?
+    - text: como posso te ajudar?
+    - text: Iai amigão, o que posso fazer pra te ajudar?
   utter_iamabot:
-  - text: I am a bot.
+    - text: I am a bot.
   utter_ask_first_name:
-  - text: Qual seu primeiro nome?
+    - text: Qual seu primeiro nome?
   utter_ask_last_name:
-  - text: Qual seu sobrenome?
+    - text: Qual seu sobrenome?
   utter_submit:
-  - text: Ok. Obrigado!
+    - text: Ok. Obrigado!
   utter_slots_values:
-  - text: Seu nome é {first_name} {last_name}!
+    - text: Seu nome é {first_name} {last_name}!
   # utter_what_your_answer_to_be:
   # - text: "What your answer:"
   #   buttons:
@@ -83,25 +83,25 @@ responses:
   #     payload: '/inform{{"responses_questions_to_be": "are"}}'
 
 actions:
-- action_show_time
-- action_new_questions
-- action_recive_answer
-- action_new_questions_to_be
-- action_receive_answer_to_be
-- action_new_questions_preposition
-- action_receive_answer_preposition
-- utter_greet
-- utter_slots_values
-- utter_submit
+  - action_show_time
+  - action_new_questions
+  - action_recive_answer
+  - action_new_questions_to_be
+  - action_receive_answer_to_be
+  - action_new_questions_preposition
+  - action_receive_answer_preposition
+  - utter_greet
+  - utter_slots_values
+  - utter_submit
 
 entities:
-- responses_questions
+  - responses_questions
 
 forms:
   name_form:
     first_name:
-    - type: from_text
+      - type: from_text
     last_name:
-    - type: from_text
-  
-version: '2.0'
+      - type: from_text
+
+version: "2.0"

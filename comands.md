@@ -31,6 +31,7 @@ rasa interactive
 > heroku container:login
 > heroku container:push web --app=chatbot-rasa-app-test-actions
 > heroku container:release web --app=chatbot-rasa-app-test-actions
+> heroku logs --tail --app=chatbot-rasa-app-test-service
 
 <!-- chatbot-rasa-app-test-actions -->
 <!-- chatbot-rasa-app-test-service -->
